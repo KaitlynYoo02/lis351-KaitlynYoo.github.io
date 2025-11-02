@@ -1,0 +1,298 @@
+<!-- File: styles.css
+ 
+/* Global styles shared by all pages */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: #f8f6f2; /* full-page background color */
+  color: #222;
+  font-family: Georgia, "Times New Roman", serif; /* non-default serif with serif fallback */
+  line-height: 1.6;
+}
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px; /* add space around page content */
+}
+header {
+  padding: 12px 0 0 0;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 12px 0 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+nav a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+}
+nav a[aria-current="page"] {
+  font-weight: 700; /* styling change */
+  border-color: #222;
+}
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.25rem; font-style: italic; } /* styling change */
+p strong { background: #fff3cd; padding: 0 4px; } /* styling change */
+footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #eee; font-size: .9rem; }
+figure { margin: 0; }
+figcaption { font-size: .9rem; color: #555; }
+
+/* Unique layout for gallery page */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e7e2d9;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.card img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+/* Utility */
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; clip: rect(0 0 0 0); overflow: hidden; }
+
+/* End styles.css */ -->
+
+<!-- =============================== -->
+<!-- File: index.html (Home page)   -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geunyeong Yoo (Kaitlyn)’s Portfolio — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Geunyeong Yoo (Kaitlyn)’s Portfolio</h1>
+       <article class="card">
+          <img src="IMG_8622.JPG" alt="Will be added later" width="100" height="130">
+          <!-- <h3 class="visually-hidden">Window plants</h3> -->
+      <p><strong>Welcome!</strong> This website is built for LIS 351 project </p>
+      <nav aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="Activity and Involvement.html">Activity and Involvement</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>About this site</h2>
+      <p><strong>Personal portfolio</strong> for LIS351</p>
+
+      <figure>
+        <!-- <img src="images/home-cover.jpg" alt="A tidy desk setup with a laptop and a cup of coffee"> -->
+        <figcaption>Home cover image</figcaption>
+      </figure>
+
+      <dl>
+        <dt>Projects</dt>
+        <!-- <dd>Selected school and research projects with short notes.</dd> -->
+        <dt>Activity and Involvement</dt>
+        <dd>Korean Business Student Association (KBSA)</dd>
+        <dd>Student Retail Association (SRA)</dd>
+        <dd>American Marketing Association (AMA)</dd>
+
+        <dt>Experience</dt>
+        <dd>Univeristy of Wisconsin Survey Center (UWSC) - Student Intern</dd>
+        <dt>Gallery</dt>
+        <!-- <dd>An image grid using CSS Grid (unique layout requirement).</dd> -->
+      </dl>
+
+      <p>Want to preview the accessibility tool I used? See the official <a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE WebAIM validator</a> (external site).</p>
+    </main>
+
+    <footer>
+      <p><small></small></p>
+      <!-- Attribution example for CC content:
+      Background image: Flower by Adam Blackbourn at https://www.adamblackbourn.com/flower.jpg, CC BY-NC-ND. -->
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- =============================== -->
+<!-- File: projects.html            -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geunyeong Yoo (Kaitlyn)’s Portfolio — Projects</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Projects</h1>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="Activity and Involvement.html">Activity and Involvement</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Selected projects</h2>
+      <ul>
+        <li><strong>LIS 464 Database Design</strong> — ERD in crow’s‑foot notation; PK/FK labeling; sample SQL views and joins.</li>
+        <li><strong>Personal Website v1</strong> — semantic HTML/CSS, accessible nav, WAVE Errors 0.</li>
+      </ul>
+      <figure>
+        <img src="images/project-thumb.jpg" alt="Screenshots of data tables and a simple website mockup">
+        <figcaption>Replace with your own project thumbnail(s).</figcaption>
+      </figure>
+    </main>
+    <footer>
+      <p><small>Back to <a href="index.html">home</a>.</small></p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- =============================== -->
+<!-- File: Activity and Involvement.html              -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geunyeong Yoo (Kaitlyn)’s Portfolio — Activity and Involvement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Activity and Involvement</h1>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="Activity and Involvement.html" aria-current="page">Activity and Involvement</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Core Activity and Involvement</h2>
+      <ol>
+        <li><strong>SQL & Databases</strong> — schema design, joins, views, constraints.</li>
+        <li><strong>Python </strong> — pandas, matplotlib; basic analysis & charts.</li>
+        <li><strong>R </strong> - (Stat classes details will be added later). </li>
+        <li><strong>HTML/CSS & Accessibility</strong> — semantic markup, alt text, WAVE Error‑free pages.</li>
+      </ol>
+      <p>Comfort with version control, GitHub Pages deployment, and clear report writing.</p>
+      <figure>
+        <img src="images/dish.jpg" alt="Code editor screenshot with highlighted HTML and CSS">
+        <figcaption>Swap in a real code/terminal screenshot.</figcaption>
+      </figure>
+    </main>
+    <footer>
+      <p><small>Back to <a href="index.html">home</a>.</small></p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- =============================== -->
+<!-- File: experience.html          -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geunyeong Yoo (Kaitlyn)’s Portfolio — Experience</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Experience</h1>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="Activity and Involvement.html">Activity and Involvement</a>
+        <a href="experience.html" aria-current="page">Experience</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Roles & highlights</h2>
+      <dl>
+        <dt><strong>UW Survey Center — Research Intern</strong></dt>
+        <dd>Survey methodology support: cognitive interviews, question wording evaluation, pilot analysis.</dd>
+        <dt><strong>Course Projects — Data & Web</strong></dt>
+        <dd>ERD/SQL practice, accessible web pages, and short analytical write‑ups.</dd>
+      </dl>
+      <!-- <p><small>Tip: use <code>&lt;cite&gt;</code> for article or report titles in sentences.</small></p> -->
+    </main>
+    <footer>
+      <p><small>Back to <a href="index.html">home</a>.</small></p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- =============================== -->
+<!-- File: gallery.html  (unique layout) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geunyeong Yoo (Kaitlyn)’s Portfolio — Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Gallery</h1>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="Activity and Involvement.html">Activity and Involvement</a>
+        <a href="experience.html">Experience</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Photo grid</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="images/pic1.jpg" alt="Will be added later">
+          <h3 class="visually-hidden">Window plants</h3>
+        </article>
+        <article class="card">
+          <img src="images/pic2.jpg" alt="Will be added later">
+          <h3 class="visually-hidden">Notebook</h3>
+        </article>
+        <article class="card">
+          <img src="images/pic3.jpg" alt="Will be added later">
+          <h3 class="visually-hidden">Skyline</h3>
+        </article>
+        <article class="card">
+          <img src="images/pic4.jpg" alt="Will be added later">
+          <h3 class="visually-hidden">Tea</h3>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <p><small>Back to <a href="index.html">home</a>.</small></p>
+    </footer>
+  </div>
+</body>
+</html>
+
